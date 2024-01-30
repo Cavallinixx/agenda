@@ -1,0 +1,40 @@
+C:\Users\vitor.csouza14\source\repos\TI18N- Agenda de tarefas\TI18N- Agenda de tarefas\obj\Debug\TI18N- Agenda de tarefas.csproj.AssemblyReference.cache
+C:\Users\vitor.csouza14\source\repos\TI18N- Agenda de tarefas\TI18N- Agenda de tarefas\obj\Debug\TI18N- Agenda de tarefas.csproj.SuggestedBindingRedirects.cache
+C:\Users\vitor.csouza14\source\repos\TI18N- Agenda de tarefas\TI18N- Agenda de tarefas\obj\Debug\TI18N- Agenda de tarefas.csproj.CoreCompileInputs.cache
+C:\Users\vitor.csouza14\source\repos\TI18N- Agenda de tarefas\TI18N- Agenda de tarefas\bin\Debug\TI18N- Agenda de tarefas.exe.config
+C:\Users\vitor.csouza14\source\repos\TI18N- Agenda de tarefas\TI18N- Agenda de tarefas\bin\Debug\TI18N- Agenda de tarefas.exe
+C:\Users\vitor.csouza14\source\repos\TI18N- Agenda de tarefas\TI18N- Agenda de tarefas\bin\Debug\TI18N- Agenda de tarefas.pdb
+C:\Users\vitor.csouza14\source\repos\TI18N- Agenda de tarefas\TI18N- Agenda de tarefas\bin\Debug\BouncyCastle.Cryptography.dll
+C:\Users\vitor.csouza14\source\repos\TI18N- Agenda de tarefas\TI18N- Agenda de tarefas\bin\Debug\Google.Protobuf.dll
+C:\Users\vitor.csouza14\source\repos\TI18N- Agenda de tarefas\TI18N- Agenda de tarefas\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\vitor.csouza14\source\repos\TI18N- Agenda de tarefas\TI18N- Agenda de tarefas\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\vitor.csouza14\source\repos\TI18N- Agenda de tarefas\TI18N- Agenda de tarefas\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\vitor.csouza14\source\repos\TI18N- Agenda de tarefas\TI18N- Agenda de tarefas\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\vitor.csouza14\source\repos\TI18N- Agenda de tarefas\TI18N- Agenda de tarefas\bin\Debug\MySql.Data.dll
+C:\Users\vitor.csouza14\source\repos\TI18N- Agenda de tarefas\TI18N- Agenda de tarefas\bin\Debug\System.Buffers.dll
+C:\Users\vitor.csouza14\source\repos\TI18N- Agenda de tarefas\TI18N- Agenda de tarefas\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Users\vitor.csouza14\source\repos\TI18N- Agenda de tarefas\TI18N- Agenda de tarefas\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\vitor.csouza14\source\repos\TI18N- Agenda de tarefas\TI18N- Agenda de tarefas\bin\Debug\System.IO.Pipelines.dll
+C:\Users\vitor.csouza14\source\repos\TI18N- Agenda de tarefas\TI18N- Agenda de tarefas\bin\Debug\System.Memory.dll
+C:\Users\vitor.csouza14\source\repos\TI18N- Agenda de tarefas\TI18N- Agenda de tarefas\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\vitor.csouza14\source\repos\TI18N- Agenda de tarefas\TI18N- Agenda de tarefas\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\vitor.csouza14\source\repos\TI18N- Agenda de tarefas\TI18N- Agenda de tarefas\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\vitor.csouza14\source\repos\TI18N- Agenda de tarefas\TI18N- Agenda de tarefas\bin\Debug\ZstdSharp.dll
+C:\Users\vitor.csouza14\source\repos\TI18N- Agenda de tarefas\TI18N- Agenda de tarefas\bin\Debug\BouncyCastle.Cryptography.xml
+C:\Users\vitor.csouza14\source\repos\TI18N- Agenda de tarefas\TI18N- Agenda de tarefas\bin\Debug\Google.Protobuf.pdb
+C:\Users\vitor.csouza14\source\repos\TI18N- Agenda de tarefas\TI18N- Agenda de tarefas\bin\Debug\Google.Protobuf.xml
+C:\Users\vitor.csouza14\source\repos\TI18N- Agenda de tarefas\TI18N- Agenda de tarefas\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\vitor.csouza14\source\repos\TI18N- Agenda de tarefas\TI18N- Agenda de tarefas\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\vitor.csouza14\source\repos\TI18N- Agenda de tarefas\TI18N- Agenda de tarefas\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\vitor.csouza14\source\repos\TI18N- Agenda de tarefas\TI18N- Agenda de tarefas\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\vitor.csouza14\source\repos\TI18N- Agenda de tarefas\TI18N- Agenda de tarefas\bin\Debug\MySql.Data.xml
+C:\Users\vitor.csouza14\source\repos\TI18N- Agenda de tarefas\TI18N- Agenda de tarefas\bin\Debug\System.Buffers.xml
+C:\Users\vitor.csouza14\source\repos\TI18N- Agenda de tarefas\TI18N- Agenda de tarefas\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\vitor.csouza14\source\repos\TI18N- Agenda de tarefas\TI18N- Agenda de tarefas\bin\Debug\System.IO.Pipelines.xml
+C:\Users\vitor.csouza14\source\repos\TI18N- Agenda de tarefas\TI18N- Agenda de tarefas\bin\Debug\System.Memory.xml
+C:\Users\vitor.csouza14\source\repos\TI18N- Agenda de tarefas\TI18N- Agenda de tarefas\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\vitor.csouza14\source\repos\TI18N- Agenda de tarefas\TI18N- Agenda de tarefas\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\vitor.csouza14\source\repos\TI18N- Agenda de tarefas\TI18N- Agenda de tarefas\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\vitor.csouza14\source\repos\TI18N- Agenda de tarefas\TI18N- Agenda de tarefas\obj\Debug\TI18N- Agenda de tarefas.csproj.CopyComplete
+C:\Users\vitor.csouza14\source\repos\TI18N- Agenda de tarefas\TI18N- Agenda de tarefas\obj\Debug\TI18N- Agenda de tarefas.exe
+C:\Users\vitor.csouza14\source\repos\TI18N- Agenda de tarefas\TI18N- Agenda de tarefas\obj\Debug\TI18N- Agenda de tarefas.pdb
