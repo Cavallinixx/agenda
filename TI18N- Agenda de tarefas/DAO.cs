@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web;
@@ -25,7 +26,11 @@ namespace TI18N__Agenda_de_tarefas
         public int i;
         public int contador;
         public string msg;
+        public string usuario;
+        public string senha;
 
+
+        
         public DAO() 
         { 
             conexao = new MySqlConnection(" server=localhost;DataBase=ti18nPessoa;Uid=root;Password=  ");
@@ -45,7 +50,7 @@ namespace TI18N__Agenda_de_tarefas
         //Metodo Inserir
         public void Inserir(string nome, string telefone, string cidade, string endereco)
         {
-            try
+            try 
             {
                 dados = "('','" + nome + "','" + telefone + "','" + cidade + "','" + endereco + "',)";
                 sql = " insert into pessoa(codigo,nome,telefone,cidade,endereco)  values" + dados;

@@ -14,6 +14,9 @@ namespace TI18N__Agenda_de_tarefas
         private int opcao;
         DAO conectar;
         public int codigo;
+        
+       
+        
 
         public ControlUsuario()
         {
@@ -28,7 +31,18 @@ namespace TI18N__Agenda_de_tarefas
             set { this.opcao = value; }
 
         }//fim do getset 
-        public void MenuSegundario()
+        public void Menu()
+        {
+            Console.WriteLine("Entre com seu usuário: \n" +
+                "1.Entrar\n" +
+                "2.Cadastrar\n" +
+                "3.Sair \n");
+            
+
+            ConsultarOpcao = Convert.ToInt32(Console.ReadLine());
+        }//fim do menu
+        
+        public void MenuEscolha()
         {
 
 
@@ -41,12 +55,35 @@ namespace TI18N__Agenda_de_tarefas
                 "6.Sair\n");
             ConsultarOpcao = Convert.ToInt32(Console.ReadLine());
         }//fim do menu
-
-        public void OperacaoSegundario()
+        public void Operacao()
         {
             do
             {
-                MenuSegundario();//Mostrar as opções para o usuário
+                Menu();//Mostrar as opções para o usuário
+                switch (ConsultarOpcao)
+                {
+                    case 1:
+                        Entrar();
+                        break;
+                    case 2:
+                        CadastrarUsuario();
+                        break;
+                    case 3:
+                        Console.WriteLine("Obrigado!!");
+                        break;
+                    default:
+                        Console.WriteLine("Informe um codigo de acordo com o menu");
+                        break;
+                }//fim do escolha caso
+            } while (ConsultarOpcao != 5);
+
+        }// fim do metodo
+
+        public void OperacaoEscolha()
+        {
+            do
+            {
+                MenuEscolha();//Mostrar as opções para o usuário
                 switch (ConsultarOpcao)
                 {
                     case 1:
@@ -74,66 +111,44 @@ namespace TI18N__Agenda_de_tarefas
             } while (ConsultarOpcao != 5);
 
         }// fim do metodo
-        public void Menu()
-        {
-            Console.WriteLine("Entre com seu usuário: \n" +
-                "1.Entrar\n" +
-                "2.Cadastrar\n" +
-                "3.Sair \n");
-
-            ConsultarOpcao = Convert.ToInt32(Console.ReadLine());
-        }//fim do menu
-        public void Operacao()
-        {
-            do
-            {
-                Menu();//Mostrar as opções para o usuário
-                switch (ConsultarOpcao)
-                {
-                    case 1:
-                        Entrar();
-                        break;
-                    case 2:
-                        CadastrarUsuario();
-                        break;
-                    case 3:
-                        Console.WriteLine("Obrigado!!");
-                        break;
-                    default:
-                        Console.WriteLine("Informe um codigo de acordo com o menu");
-                        break;
-                }//fim do escolha caso
-            } while (ConsultarOpcao != 5);
-
-        }// fim do metodo
-
         
-        
+
         public void Entrar() 
         {
             Console.WriteLine("Digite o usuário: ");
             string usuario = Console.ReadLine();
+
             Console.WriteLine("Informe sua senha: ");
             string senha = Console.ReadLine();
         }//fim do metodo entrar
 
         public void CadastrarUsuario()
         {
-            Console.WriteLine("Informe o nome da pessoa: ");
+            Console.WriteLine("Informe o seu nome: ");
             string nome = Console.ReadLine();
-            Console.WriteLine("Informe o telefone da pessoa: ");
+
+            Console.WriteLine("Informe seu telefone: ");
             string telefone = Console.ReadLine();
-            Console.WriteLine("Informe a cidade da pessoa:");
+
+            Console.WriteLine("Informe sua cidade: ");
             string cidade = Console.ReadLine();
-            Console.WriteLine("Informe o endereço da pessoa: ");
+
+            Console.WriteLine("Informe seu endereço: ");
             string endereco = Console.ReadLine();
+
+
             Console.WriteLine("Informe seu usuario: ");
             string usuario = Console.ReadLine();
+
             Console.WriteLine("Informe sua senha: ");
             string senha = Console.ReadLine();
 
+            Console.WriteLine("Usuário Cadastrado!!");
+            MenuEscolha();
+
             //Inserir no banco de dados
             conectar.Inserir(nome, telefone, cidade, endereco);
+
         }//fim do metodo cadastrar
 
         public void Cadastrar()
