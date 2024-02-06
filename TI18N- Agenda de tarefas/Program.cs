@@ -10,9 +10,9 @@ namespace TI18N__Agenda_de_tarefas
     {
         static void Main(string[] args)
         {
-            ControlUsuario pessoa= new ControlUsuario(); //Conectando a control na model
-            pessoa.Operacao();
-            pessoa.OperacaoEscolha();
+            ControlUsuario usuario= new ControlUsuario(); //Conectando a control na model
+            usuario.Operacao();
+            usuario.OperacaoEscolha();
             Console.ReadLine();//Manter prompt aberto 
 
         }//fim do metodo
