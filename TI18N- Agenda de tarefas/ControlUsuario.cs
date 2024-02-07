@@ -15,13 +15,12 @@ namespace Agenda_de_Tarefas
         private int opcao;
         DAO conectar;
         public int codigo;
-        string usuarioCadastro;
-        string admUsuario;
-        string admSenha;
-        string senhaCadastro;
+        string usuarioDigitado;
+        string senhaDigitada;
         string endereco;
         string usuario;
         string senha;
+        
 
 
         public ControlUsuario()
@@ -29,12 +28,9 @@ namespace Agenda_de_Tarefas
             //Instanciando a variavel
             ConsultarOpcao = 0;
             conectar = new DAO();//Conectando ao banco
-            usuario = usuarioCadastro;
-            senha = senhaCadastro;
-            admUsuario = "vitao";
-            admSenha = "123";
-            usuario = "vitor";
-            senha = "321";
+            usuario = "vitao";
+            senha = "123";
+            
 
 
 
@@ -65,23 +61,20 @@ namespace Agenda_de_Tarefas
                 switch (ConsultarOpcao)
                 {
                     case 1:
-                        EntrarUsuario();
+                        
                         do
                         {
-                            if (usuario == admUsuario && senha == admSenha)
+                            Console.WriteLine("Insira seu usuário: ");
+                            usuarioDigitado = Console.ReadLine();
+                            Console.WriteLine("Insira sua senha: ");
+                            senhaDigitada = Console.ReadLine();
+                            if (conectar.ValidarCadastro(usuarioDigitado, senhaDigitada, usuario, senha) == false)
                             {
-                                Console.WriteLine("Bem-vindo, administrador!");
+                                Console.WriteLine("ERRO!, Digite o usuário e senha corretamente!! ");
+                                Menu();
                             }
-                            if (usuario == usuario && senha == senha)
-                            {
-                                Console.WriteLine("Bem vindo, escolha uma das opções: ");
 
-                            }
-                            else
-                            {
-                                Console.WriteLine("ERRO! o usuário ou a senha estão incorretos!! ");
-                            }
-                        } while ((usuario == usuario) || (senha == senha));
+                        } while (conectar.ValidarCadastro(usuarioDigitado, senhaDigitada, usuario, senha) == false);
                         break;
                     case 2:
                         CadastrarUsuario();
@@ -146,19 +139,11 @@ namespace Agenda_de_Tarefas
                         Console.WriteLine("Informe um código de acordo com o menu");
                         break;
                 }//fim do escolha caso
-            } while (ConsultarOpcao != 4);
+            } while (ConsultarOpcao != 6);
 
         }//fim do método
 
-        public void EntrarUsuario()
-        {
-            Console.WriteLine("Insira seu usuário: ");
-            usuario = Console.ReadLine();
-            Console.WriteLine("Insira sua senha: ");
-            senha = Console.ReadLine();
-
-
-        }//fim do metodo login
+        
 
         public void CadastrarUsuario()
         {
@@ -188,6 +173,8 @@ namespace Agenda_de_Tarefas
             string diaMesAno = Console.ReadLine();
             Console.WriteLine(" Escreva o horario de agora: ");
             string hora = Console.ReadLine();
+            Console.WriteLine("Cadastro Realizadp!!");
+            conectar.InserirSegundoMenu(titulo,descricao, diaMesAno, hora);
         }//fim do metodo Cadastrar Tarefa
 
         public void Consultar()

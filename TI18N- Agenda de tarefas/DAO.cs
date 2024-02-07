@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.Design;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,18 +23,19 @@ namespace Agenda_de_Tarefas
         public string[] telefone;
         public string[] cidade;
         public string[] endereco;
+        public string[] titulo;
+        public string[] descricao;
+        public string[] diaMesAno;
+        public string[] hora;
+
         public int i;
         public string resultado;
         public int contador;
         public string msg;
         public string usuario;
         public string senha;
-        public string titulo;
-        public string descricao;
-        public string diaMesAno;
-        public string hora;
-        public string usuarioCadastro;
-        public string senhaCadastro;
+        public double usuarioDigitado;
+        public double senhaDigitada;
 
 
         public DAO()
@@ -69,11 +71,6 @@ namespace Agenda_de_Tarefas
                 Console.WriteLine("Erro!! Algo deu errado! \n\n\n " + erro);
             }
         }//fim do metodo inserir 
-
-
-
-
-
         public void PreencherVetor()
         {
 
@@ -118,29 +115,88 @@ namespace Agenda_de_Tarefas
             leitura.Close();//Encerrar o acesso ao Banco de Dados
         }//fim do preencher
 
-        static bool ValidarCadastro(string usuario, string senha)
+
+
+
+
+
+
+
+        public void InserirSegundoMenu(string titulo, string descricao, string diaMesAno, string hora)
         {
-            if ((usuario == usuario) || (senha == senha))
+            try
             {
-                return true;
+                dados = "('','" + titulo + "','" + descricao + "','" + diaMesAno + "','" + hora + "')";
+                sql = " insert into CadastroLoginMenuEscolha(codigo,titulo,descricao,diaMesAno,hora)  values" + dados;
+
+                MySqlCommand conn = new MySqlCommand(sql, conexao); // preparando a coneão no banco
+                resultado = "" + conn.ExecuteNonQuery();//Ctrl + Enter -> Executando o comando no BD
+                Console.WriteLine(resultado + "Linha afetada!");
             }
-            else
+            catch (Exception erro)
             {
-                return false;
+                Console.WriteLine("Erro!! Algo deu errado! \n\n\n " + erro);
             }
-        }//fim método
+        }//fim do metodo inserir 
+        public void PreencherVetorAgenda()
+        {
+
+            string query = " Select * from pessoa ";
+
+            //Instanciando os vetores
+            codigo = new int[100];
+            titulo = new string[100];
+            descricao = new string[100];
+            diaMesAno = new string[100];
+            hora = new string[10];
+
+
+            //Preencher com vetores genéricos
+            for (i = 0; i < 100; i++)
+            {
+                codigo[i] = 0;
+                titulo[i] = "";
+                descricao[i] = "";
+                diaMesAno[i] = "";
+                hora[i] = "";
+
+            }//fim do for
+
+            MySqlCommand coletar = new MySqlCommand(query, conexao);
+            //leitura do banco
+            MySqlDataReader leitura = coletar.ExecuteReader();
+
+            i = 0;
+            contador = 0;
+
+            while (leitura.Read())
+            {
+                codigo[i] = Convert.ToInt32(leitura["codigo"]);
+                titulo[i] = "" + leitura["titulo"];
+                descricao[i] = "" + leitura["descricao"];
+                diaMesAno[i] = "" + leitura["diaMesAno"];
+                hora[i] = "" + leitura["hora"];
+                i++;
+                contador++;
+            }//Preenchendo com o vetor com os dados do banco
+
+            leitura.Close();//Encerrar o acesso ao Banco de Dados
+        }//fim do preencher
+
+
+        
         public string ConsultarTudo()
         {
             //Preencher o vetor
-            PreencherVetor();
+            PreencherVetorAgenda();
             msg = "";
             for (i = 0; i < contador; i++)
             {
                 msg = "\n\nCódigo: " + codigo[i] +
-                    ", Nome: " + nome[i] +
-                    ", Telefone: " + telefone[i] +
-                    ", Cidade: " + cidade[i] +
-                    ", Endereço:" + endereco[i];
+                    ", Titulo: " + titulo[i] +
+                    ", Descrição: " + descricao[i] +
+                    ", DiaMesAno: " + diaMesAno[i] +
+                    ", Hora:" + hora[i];
             }// fim do for
 
             return msg;//Mostrar na tela o resultado da consulta
@@ -162,6 +218,20 @@ namespace Agenda_de_Tarefas
             }
         }//fim do método
 
+        public Boolean ValidarCadastro(string usuarioDigitado, string senhaDigitada, string usuario, string senha)
+        {
+            if ((usuarioDigitado == usuario) || (senhaDigitada == senha))
+            {
+                
+                return true;
+                
+            }
+            
+            return false;
+               
+           
+        }//fim método
+
 
         public string Consultar(int cod)
         {
@@ -171,10 +241,10 @@ namespace Agenda_de_Tarefas
                 if (codigo[i] == cod)
                 {
                     msg = "\n\nCódigo: " + codigo[i] +
-                           ", Nome: " + nome[i] +
-                           ", Telefone: " + telefone[i] +
-                           ", Cidade: " + cidade[i] +
-                           ", Endereço: " + endereco;
+                           ", titulo: " + titulo[i] +
+                           ", descricao: " + descricao[i] +
+                           ", diaMesAno: " + diaMesAno[i] +
+                           ", hora: " + hora[i];
 
 
                     return msg;
